@@ -6,6 +6,6 @@
 /* Media query per schermi più grandi (PC) */
 @media screen and (min-width: 1024px) {
     .content {
-        padding: 20px; /* Aggiungi padding solo su schermi più grandi */
+        padding: 100px; /* Aggiungi padding solo su schermi più grandi */
     }
 }
