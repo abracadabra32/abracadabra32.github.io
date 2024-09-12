@@ -1,11 +1,15 @@
-/* Stili generali */
-.content {
-    padding: 0; /* Nessun padding di default */
+
+.grid-container {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
 }
 
-/* Media query per schermi più grandi (PC) */
-@media screen and (min-width: 1024px) {
-    .content {
-        padding: 100px; /* Aggiungi padding solo su schermi più grandi */
-    }
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
 }
