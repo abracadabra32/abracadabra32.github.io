@@ -1,0 +1,181 @@
+body {
+    background-color: #22100c;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-size: 1.6rem;
+    height: 100%;
+    margin: 0;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+/*banner*/
+.banner {
+    background-image: url(images/banner.jpg);
+    background-position: 20% 35%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    margin-top: -58px;
+}
+
+.banner .shadow {
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0), #2e1d16);
+    height: 100%;
+    width: 100%;
+}
+
+
+/*nav bar personaggi*/
+.menu .active {
+    padding: 15px;
+    color: #f03c3d;
+}
+
+.menu .link {
+    padding: 15px;
+    color: #8b716d;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: .15s;
+    outline: 0;
+}
+
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+.menu {
+    align-self: end;
+    display: flex;
+    font-size: 1.3rem;
+    justify-content: space-evenly;
+    justify-self: center;
+    max-width: 800px;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.cont {
+    position: relative;
+}
+
+.cont1 {
+    display: flex;
+    grid-column-gap: 30px;
+    margin-top: -125px;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cont1 {
+    width: 350px;
+    position: relative;
+    top: -350px;
+    padding: 0px 400px 0px 400px;
+}
+
+.cover {
+    border-radius: 14px;
+    box-shadow: 0 0 29px rgba(49, 54, 68, .25);
+    margin-top: 15px;
+    margin-bottom: 20px;
+   
+}
+
+img {
+    vertical-align: text-top;
+    border-style: none;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    height: 350px;
+
+}
+
+
+.pbutton {
+    box-shadow: 0px 0px 11px 1px #0b0b0ba9;
+    background-color: #f03c3d;
+    border-radius: 14px;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-size: 17px;
+    padding: 12px 76px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #0b0b0ba9;
+    border-width: 0px;
+    position: relative;
+    
+}
+
+.pbutton:hover {
+    background-color: #f56d6d;
+}
+
+.pbutton:active {
+    position: relative;
+    top: 1px;
+}
+
+.description {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin: 0;
+    margin-left: 350px;
+    padding: 15px 0;
+    transition: .2s;
+}
+.description, td {
+    color: #ae9992;
+    padding: 0px 400px 0px 400px;
+}
+h1,
+h3,
+th {
+    color: #8b716d;
+    margin: 0;
+    padding: 0;
+}
+.title{
+    margin-left: 350px;
+    padding: 0px 400px 0px 400px;
+}
+
+h1 {
+    font-size: 1.9rem;
+    font-weight: 400;
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+.cont2 {
+    background-color: #2e1d16;
+    position: relative;
+    position: relative;
+    top: -50px;
+    height: fit-content;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    color: #ae9992;
+}

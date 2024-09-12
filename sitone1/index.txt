@@ -1,0 +1,13 @@
+<!doctype html> //si usa per essere visualizzato per tutti
+<html lang="it"> //lingua del sito
+<head> //indispensabile per iniziare un codice html
+	<meta charset="utf-8"/> //meta significa metadati ovvero dei dati invisibili alla visualizzazione; utf-8 font caratteri occidentali
+	<meta name="viewport"content="width=device-widht"/> //serve per adattare la grandezza della pagina alla grandezza delo schermo del dispositivo
+	<title>NakedMegamindxxx</title>
+</head>
+<body>
+	<img src="images/megamwind.jpg" alt="L'uomo blu ti guarda con sguardo sensuale e ti fa cockrating"/>
+</body>
+</html>
+
+	
