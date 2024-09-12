@@ -78,8 +78,7 @@ a {
 .cont1 {
     width: 350px;
     position: relative;
-    top: -350px;
-    padding: 0px 400px 0px 400px;
+    top: -350px;
 }
 
 .cover {
@@ -135,7 +134,7 @@ img {
 }
 .description, td {
     color: #ae9992;
-    padding: 0px 400px 0px 400px;
+   
 }
 h1,
 h3,
@@ -146,7 +145,7 @@ th {
 }
 .title{
     margin-left: 350px;
-    padding: 0px 400px 0px 400px;
+   
 }
 
 h1 {
