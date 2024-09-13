@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe adattabile</title>
+    <style>
+        iframe {
+            width: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <iframe id="myIframe" src="pagina_contenuta.html"></iframe>
+
+    <script>
+        window.addEventListener('message', function(event) {
+            if (event.origin !== window.location.origin) {
+                return;
+            }
+            var iframe = document.getElementById('myIframe');
+            iframe.style.height = event.data + 'px';
+        }, false);
+    </script>
+</body>
+</html>

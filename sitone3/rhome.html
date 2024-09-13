@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>DanDaDan</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link href="home.css" rel="stylesheet">
+    <style>
+        iframe{
+            width: 100%;
+            min-width: 1080px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="shadow"></div>
+    </div>
+
+    <div class="cont">
+        <div class="cont1">
+            <div class="cover"><img class="imgcover" src="images/cover.jpg"></div>
+            <div class="play">
+                <a class="pbutton" href="https://mangaplus.shueisha.co.jp/titles/100171">
+                    Leggi
+                </a>
+            </div>
+        </div>
+        <div class="cont2">
+            <div class="title">
+                <h1>DanDaDan</h1>
+            </div>
+            <div class="description">
+                <p>
+                    Ken Takakura è un ragazzo vittima di atti di bullismo. Un giorno, il giovane inizia a dialogare per
+                    caso con la sua compagna di classe Momo Ayase. Lui è un fanatico dell'occulto, mentre lei crede
+                    soltanto nei fantasmi. I due, per una scommessa, decidono di recarsi separatamente in zone associate
+                    sia all'occulto che al soprannaturale. Visitando i rispettivi luoghi, entrambi si devono
+                    ricredere... inizia così la loro avventura.
+                </p>
+            </div>
+        </div>
+    </div>
+    <iframe id="myIframe" src="home.html"></iframe>
+
+    <script>
+        window.addEventListener('message', function(event) {
+            if (event.origin !== window.location.origin) {
+                return;
+            }
+            var iframe = document.getElementById('myIframe');
+            iframe.style.height = event.data + 'px';
+        }, false);
+    </script>
+       <div class='fine'>
+        <img src="images/contattami.png"/>
+        <div class="contattami">
+        <h2>Contattami</h2>
+        <p>Email: vitogsans@gmail.com<br>
+           Telefono: +39 342 072 6978
+        </p>
+        </div>
+     </div>
+     </body>
+    
+</body>
+</html>
