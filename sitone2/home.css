@@ -15,6 +15,7 @@ body {
     background-size: cover;
     height: 400px;
     margin-top: -58px;
+    min-width: 1080px;
 }
 
 .banner .shadow {
@@ -28,6 +29,7 @@ body {
     grid-template-columns: 246px auto;
     background-color: #2e1d16;
     padding: 0px 50px 0px 50px;
+    min-width: 1080px;
 }
 @media screen and (min-width:1081px){
     .cont{
@@ -154,19 +156,28 @@ a {
     -webkit-text-decoration-skip: objects;
 } 
 
-.menu {
+/* .menu {
     align-self: end;
     display: flex;
     font-size: 1.3rem;
-    justify-content: space-evenly;
+    justify-content: space-around;
     justify-self: center;
     padding-top: 10px;
-    width: 100%;
     background-color: #2e1d16;
     border-radius: 14px;
-}
+} */
+ .menu{
+    display: inline-grid;
+    grid-template-columns: 33% 33% 33%;
+    width: 100%;
+    background-color: #2e1d16;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 14px;
+ }
  .separator{
-   padding:50px 50px 0px 50px;
+    padding:50px 50px 0px 50px;
+    min-width: 1080px;
 } 
 @media screen and (min-width:1081px){
     .separator{
@@ -212,7 +223,9 @@ td,th{
 
 }
 video{
-padding: 10px 20px 20px 10px;
+    padding: 10px 20px 20px 10px;
+    border-radius: 40px;
+    overflow: hidden; 
 }
 
 /* galleria */
@@ -237,7 +250,14 @@ padding: 10px 20px 20px 10px;
 .img img{
     width: 100%;
     height: auto;
+    transition: transform .3s;
+    border-radius: 14px;
 } 
+.img img:hover{
+    transform: scale(1.07);
+    box-shadow: 0 0 29px #22100c ;
+}
+
 
 /* anime */
 
@@ -245,6 +265,7 @@ padding: 10px 20px 20px 10px;
     background-color: #2e1d16;
     border-radius: 14px;
     padding: 20px;
+    width: 100%;
 }
  .relations h3{
     padding-bottom: 10px;
@@ -262,3 +283,169 @@ padding: 10px 20px 20px 10px;
 .animeinfo h2{
     color:#f03c3d;
 }
+/*contattami*/
+.fine{
+    padding: 20px; 
+    width: 100%;
+    background-color: black;
+    display: inline-grid;
+    grid-template-columns: 200px auto;
+    min-width: 1080px;
+}
+.fine p, .fine h2{
+    padding-left: 10px;
+    color: white;
+}
+
+
+/* ----------------PERSONAGGI--------------- */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  } 
+.container {
+    margin-inline: 1.5rem;
+    padding-block: 5rem;
+  } 
+.container__title {
+    text-align: center;
+    color: #8b716d;
+    margin-bottom: 3rem;
+  } 
+.card__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 2rem;
+} 
+.card__product {
+    background-color: #22100c;
+    padding-block: 1.25rem;
+    text-align: center;
+    display: grid;
+    row-gap: 1.5rem;
+    cursor: pointer;
+}
+.card__img {
+    width: 200px;
+    justify-self: center;
+    filter: drop-shadow(0 8px 16px hsla(5, 90%, 4%, .2));
+    border-radius: 14px;
+}
+.card__name h2{
+    font-size: 1.5rem;
+    /* margin-bottom: 1.5rem; */
+    color: #8b716d;
+}
+
+.card__price {
+    font-size: 1.25rem;
+    color: #ae9992;
+}
+.card__product:hover {
+    transform: scale(1.1);
+}
+.card__product{
+    background-color: #2e1d16;
+    border-radius: 14px;
+    transition: transform .3s;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: hsla(5, 90%, 4%, .2);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(24px);
+    display: grid;
+    place-items: center;
+    padding: 2rem 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity .4s, visibility .4s;
+  }
+  .modal__card {
+    position: relative;
+    background-color: #2e1d16;
+    padding: 3rem 1.25rem 2rem;
+    display: grid;
+    row-gap: 1.5rem;
+    text-align: center;
+    transform: rotateX(90deg);
+    transition: transform .6s;
+    border-radius: 14px;
+  }
+  .modal__close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    color: #8b716d;
+    cursor: pointer;
+  }
+  .modal__img {
+    width: 220px;
+    justify-self: center;
+    filter: drop-shadow(0 8px 16px hsla(5, 90%, 4%, .2));
+    border-radius: 14px;
+  }
+  .modal__name {
+    font-size: 3rem;
+    color: #8b716d;
+    margin-bottom: .5rem;
+  }
+  .modal__info {
+    margin-bottom: 1rem;
+  }
+/* Active modal */
+.active-modal {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: initial;
+  }
+  
+.active-modal .modal__card {
+    transform: rotateX(0);
+  }
+  @media screen and (min-width: 768px) {
+    .card__container {
+      grid-template-columns: repeat(3, 300px);
+    }
+    .container{
+        min-width: 1040px;
+    }
+  }
+
+  @media screen and (min-width: 1081px) {
+    /* .container__title {
+      margin-bottom: 4.5rem;
+    } */
+  
+    .card__container {
+      grid-template-columns: repeat(3, 330px);
+      gap: 3rem;
+    }
+    .card__product {
+      padding-block: 2rem;
+      border-width: 6px;
+    }
+    /* .card__name, 
+    .card__price {
+      font-size: 1rem;
+    } */
+  
+    .modal__card {
+      max-width: 50%;
+      padding: 3rem 2.5rem 2.5rem;
+    }
+    .modal__img {
+      width: 250px;
+    }
+    /* .modal__name, 
+    .modal__price {
+      font-size: 1rem;
+    } */
+  }

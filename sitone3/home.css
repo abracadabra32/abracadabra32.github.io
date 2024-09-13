@@ -7,6 +7,24 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }
+.home{
+    display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  min-width: 1080px;
+  position: relative;
+  left: -25px;
+  top: 20px;
+}
+.home img{
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+    transition: 0.3s;
+}
+.home img:hover{
+    transform: scale(1.1);
+    transform: rotate(30deg);
+}
 /*banner*/
 .banner {
     background-image: url(images/banner.jpg);
