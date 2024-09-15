@@ -1,0 +1,117 @@
+<!doctype html> <!si usa per essere visualizzato per tutti-->
+<html lang="it"> <!lingua del sito-->
+<head> <!indispensabile per iniziare un codice html-->
+	<meta charset="utf-8"/><!meta significa metadati ovvero dei dati invisibili alla visualizzazione; utf-8 font caratteri occidentali-->
+	<meta name="viewport"content="width=device-widht"/> <!serve per adattare la grandezza della pagina alla grandezza delo schermo del dispositivo-->
+	<title>Firefox</title><!titolo della pagina-->
+	<link rel="icon" href="images/firefox.ico" type="image/x-icon" />
+	 
+	<link herf="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        html{
+            background-image: radial-gradient(aqua, darkblue);
+            padding: 0px 0px 0px 0px;
+        }
+        .menu {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .menu a {
+            padding: 15px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .menu a:hover {
+            color: #f1f1f1;
+        }
+        .menu .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            text-align:left;
+            background-color: black 0.0;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+        }
+        .openbtn:hover {
+            background-color: #444 0.0;
+        }
+        iframe {
+            width: 100%;
+            min-width: 1080px;
+            border: none;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+	</head>
+<body>
+	   <div id="myMenu" class="menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">×</a>
+        <a href="selettore.html">selettore siti</a>
+        <a href="https://sites.google.com/view/vitogiuseppesanseverino/home?authuser=1">il mio portfolio</a>
+        <a href="index.html">il mio manifesto di firefox</a>
+        <a href="rhome1.html">il mio sito</a>
+    </div>
+
+    <button class="openbtn" onclick="openMenu()">☰ Apri Menu</button>
+
+		<script>
+        function openMenu() {
+            document.getElementById("myMenu").style.width = "50%";
+        }
+
+        function closeMenu() {
+            document.getElementById("myMenu").style.width = "0";
+        }
+
+        window.addEventListener('message', function(event) {
+            if (event.origin !== window.location.origin) {
+                return;
+            }
+            var iframe = document.getElementById('myIframe');
+            iframe.style.height = event.data + 'px';
+        }, false)
+    </script>
+    <iframe id="myIframe" src="index.html"></iframe>
+    <script>
+        window.addEventListener('message', function(event) {
+            if (event.origin !== window.location.origin) {
+                return;
+            }
+            var iframe = document.getElementById('myIframe');
+            iframe.style.height = event.data + 'px';
+        }, false);
+    </script>
+</body>
+</html>
+
+	

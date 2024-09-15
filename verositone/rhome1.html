@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8" />
+    <title>DanDaDan</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link href="home.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        .menu {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .menu a {
+            padding: 15px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .menu a:hover {
+            color: #f1f1f1;
+        }
+        .menu .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            min-width: 1080px;
+            width: 100%;
+            display: flex;
+            text-align:left;
+            background-color: #111;
+            color: black;
+            padding: 10px 15px;
+            border: none;
+        }
+        .openbtn:hover {
+            background-color: #444;
+        }
+        iframe {
+            width: 100%;
+            min-width: 1080px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="myMenu" class="menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">×</a>
+        <a href="selettore.html">selettore siti</a>
+        <a href="https://sites.google.com/view/vitogiuseppesanseverino/home?authuser=1">il mio portfolio</a>
+        <a href="index.html">il mio manifesto di firefox</a>
+        <a href="rhome1.html">il mio sito</a>
+    </div>
+
+    <button class="openbtn" onclick="openMenu()">☰ Apri Menu</button>
+
+    </a>
+    <div class="banner">
+        <div class="shadow"></div>
+    </div>
+
+    <div class="cont">
+        <div class="cont1">
+            <div class="cover"><img class="imgcover" src="images/cover.jpg"></div>
+            <div class="play">
+                <a class="pbutton" href="https://mangaplus.shueisha.co.jp/titles/100171">
+                    Leggi
+                </a>
+            </div>
+        </div>
+        <div class="cont2">
+            <div class="title">
+                <h1>DanDaDan</h1>
+            </div>
+            <div class="description">
+                <p>
+                    Ken Takakura è un ragazzo vittima di atti di bullismo. Un giorno, il giovane inizia a dialogare per
+                    caso con la sua compagna di classe Momo Ayase. Lui è un fanatico dell'occulto, mentre lei crede
+                    soltanto nei fantasmi. I due, per una scommessa, decidono di recarsi separatamente in zone associate
+                    sia all'occulto che al soprannaturale. Visitando i rispettivi luoghi, entrambi si devono
+                    ricredere... inizia così la loro avventura.
+                </p>
+            </div>
+        </div>
+    </div>
+    <iframe id="myIframe" src="home.html"></iframe>
+
+    <script>
+        function openMenu() {
+            document.getElementById("myMenu").style.width = "250px";
+        }
+
+        function closeMenu() {
+            document.getElementById("myMenu").style.width = "0";
+        }
+
+        window.addEventListener('message', function(event) {
+            if (event.origin !== window.location.origin) {
+                return;
+            }
+            var iframe = document.getElementById('myIframe');
+            iframe.style.height = event.data + 'px';
+        }, false);
+    </script>
+
+    <div class='fine'>
+        <img src="images/contattami.png"/>
+        <div class="contattami">
+            <h2>Contattami</h2>
+            <p>Email: vitogsans@gmail.com<br>
+               Telefono: +39 342 072 6978
+            </p>
+        </div>
+    </div>
+</body>
+</html>

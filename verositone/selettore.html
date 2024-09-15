@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selettore di Siti</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Seleziona un sito</h1>
+        <select id="siteSelector">
+            <option value="https://sites.google.com/view/vitogiuseppesanseverino/home?authuser=1">il mio portfilio</option>
+            <option value="https://abracadabra32.github.io/sitone/index.html">il mio manifesto di firefox</option>
+            <option value="rhome1.html">il mio progetto</option>
+        </select>
+        <br>
+        <button onclick="openSite()">Apri Sito</button>
+    </div>
+
+    <script>
+        function openSite() {
+            var selector = document.getElementById('siteSelector');
+            var url = selector.value;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
